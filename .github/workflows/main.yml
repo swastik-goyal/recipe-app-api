@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
  
     - name: Start containers
-      run: docker-compose -f "docker-compose.yml" up -d --build
+      run: docker-compose -f "docker-compose.yaml" up -d --build
  
     - name: Run tests
       run: docker-compose run app sh -c "python3 manage.py test && flake8"
